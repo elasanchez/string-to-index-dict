@@ -8,8 +8,6 @@ Desc:   This program can be compiled as a library to be used to perform the foll
             d: [2],
             r: [0,4] }
 
-The inspirate behind this is to imitate a functionality of python's defaultdict function from collections library
-
 Date: Sunday, Sept 16, 2018
 */
 
@@ -44,7 +42,7 @@ namespace dictionary
             if(finder != letter_index_map.end())
                 (finder->second).push_back(i);
             else //not registered
-                letter_index_map.insert( {*ptr, vec} );
+                letter_index_map.insert( make_pair(*ptr, vec) );
             i++; 
             ptr++;
         }
